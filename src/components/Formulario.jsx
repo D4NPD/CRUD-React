@@ -64,6 +64,14 @@ const Formulario = () => {
         }   
     }
 
+    const eliminar = async (id) =>{
+        try {
+            await deleteDoc(doc(db,'estudiantes',id))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return(
         <div className="container mt-5">
         <div className="row">
@@ -117,7 +125,7 @@ const Formulario = () => {
                           {estudiante.nombre} | {estudiante.apellido} | {estudiante.correo} | {estudiante.nacimiento} | {estudiante.telefono} | {estudiante.genero} | {estudiante.carrera}
                         </div>
                         <div className='btn btn-outline-secondary'>Editar</div>
-                        <div className='btn btn-danger'>Eliminar</div>
+                        <div className='btn btn-danger' onClick={()=>eliminar(estudiante.id)}>Eliminar</div>
                     </div>
                 ))
             }
