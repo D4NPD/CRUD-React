@@ -1,0 +1,2 @@
+onClick={()=>editar(estudiante)}
+onClick={()=>eliminar(estudiante.id)}
