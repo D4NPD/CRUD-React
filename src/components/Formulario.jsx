@@ -183,6 +183,7 @@ const Formulario = () => {
             {
                 listaEstudiantes.map(estudiante=>(
                     <div key={estudiante.id} className='contenedor-lista'>
+                        <img className='mx-2' src="https://picsum.photos/40" alt="imagen aleatoria" />
                         <div className='texto-solicitud'>
                           {estudiante.nombre} | {estudiante.apellido} | {estudiante.correo} | {estudiante.nacimiento} | {estudiante.telefono} | {estudiante.genero} | {estudiante.carrera}
                         </div>
